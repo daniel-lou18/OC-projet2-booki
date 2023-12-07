@@ -58,6 +58,11 @@ li {
   list-style: none;
 }
 
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
 .section-title {
   margin: 0;
   font-size: var(--font-size-xl);
@@ -98,12 +103,12 @@ li {
 /****** Header (en-tête) ***********/
 
 .navbar {
-  height: 79px;
   display: flex;
   justify-content: space-between;
 }
 
 .logo-link {
+  height: 79px;
   padding: 30px 0;
 }
 
@@ -156,10 +161,6 @@ li {
 .search-form {
   display: inline-flex;
   height: 50px;
-  /* border-radius: 15px; */
-  /* overflow: hidden; */
-  font-size: var(--font-size-l);
-  font-weight: bold;
 }
 
 .search-bar {
@@ -170,8 +171,8 @@ li {
 .search-form button {
   padding-left: 16px;
   padding-right: 16px;
-  font-size: inherit;
-  font-weight: inherit;
+  font-size: var(--font-size-l);
+  font-weight: bold;
 }
 
 .search-icon-wrapper {
@@ -203,6 +204,10 @@ li {
   color: white;
   background-color: var(--main-color);
   border: none;
+}
+
+.search-button:hover {
+  color: var(--light-main-color);
 }
 
 .search-button .icon i {
@@ -243,7 +248,6 @@ li {
 
 .filter-item:hover {
   background: var(--light-main-color);
-  cursor: pointer;
 }
 
 .filter-item i {
@@ -251,7 +255,7 @@ li {
 }
 
 .filter-text {
-  padding: 0 16px;
+  margin-left: 16px;
 }
 
 .search-subtitle span {
@@ -308,7 +312,7 @@ section.hebergements {
 }
 
 .hebergements-cards .card-content {
-  padding: 4px 8px;
+  padding: 4px 10px 10px 10px;
 }
 
 .hebergements-cards .card-title {
@@ -490,7 +494,12 @@ footer {
     padding-right: 20px;
   }
 
+  .search-form {
+    width: 100%;
+  }
+
   .search-bar {
+    flex: 1;
     border: 1px solid var(--light-bg-color);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -498,6 +507,7 @@ footer {
 
   .search-input {
     border: 0;
+    flex: 1;
   }
 
   .search-button {
@@ -528,18 +538,29 @@ footer {
 
   .filters-container {
     flex-wrap: wrap;
+    gap: 10px;
   }
 
   .filter-item {
-    flex: 1;
+    /* pour tenir compte du gap */
+    width: calc(50% - 5px);
+  }
+
+  .filters-container * {
+    font-size: var(--font-size-m);
   }
 
   .hebergements-and-populaires {
     flex-direction: column-reverse;
   }
 
+  .hebergements-and-populaires section {
+    border-radius: 0;
+  }
+
   section.hebergements {
     width: auto;
+    background-color: white;
   }
 
   .hebergements-cards,
@@ -552,6 +573,11 @@ footer {
 
   .hebergements-cards a,
   .populaires-cards a {
+    width: auto;
+  }
+
+  .activites-cards img {
+    height: 141px;
     width: auto;
   }
 
