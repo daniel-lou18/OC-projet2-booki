@@ -238,16 +238,11 @@ button:hover {
   font-size: var(--font-size-l);
 }
 
-.filters-container button {
-  font-size: var(--font-size-ml);
-  font-weight: bold;
-}
-
 .filter-item {
+  font-size: 21px;
   height: 50px;
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: 4px 19px;
   border: 2px solid var(--dark-bg-color);
   border-radius: 25px;
@@ -259,12 +254,18 @@ button:hover {
   background: var(--light-main-color);
 }
 
-.filter-item i {
-  transform: scale(1.15);
+.filter-icon-wrapper {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .filter-text {
   margin-left: 16px;
+  font-size: var(--font-size-ml);
+  font-weight: bold;
 }
 
 .search-subtitle span {
@@ -507,7 +508,7 @@ footer {
     align-self: start;
   }
 
-  .filters-container button {
+  .filter-text {
     font-size: var(--font-size-m);
   }
 
@@ -592,7 +593,7 @@ footer {
   /* Barre de recherche */
 
   .search-form {
-    width: min(410px, 100%);
+    width: min(510px, 100%);
   }
 
   .search-bar {
@@ -633,13 +634,13 @@ footer {
   }
 
   .filter-item {
-    max-width: 200px;
     /* pour tenir compte du gap */
-    width: calc(50% - 5px);
+    width: min(calc(50% - 5px), 250px);
   }
 
-  .filters-container button {
+  .filter-text {
     font-size: var(--font-size-s);
+    margin-left: 14px;
   }
 
   /* Herbergements, populaires et footer */
