@@ -243,6 +243,7 @@ button:hover {
   height: 50px;
   display: flex;
   align-items: center;
+  gap: 16px;
   padding: 4px 19px;
   border: 2px solid var(--dark-bg-color);
   border-radius: 25px;
@@ -263,7 +264,6 @@ button:hover {
 }
 
 .filter-text {
-  margin-left: 16px;
   font-size: var(--font-size-ml);
   font-weight: bold;
 }
@@ -634,13 +634,14 @@ footer {
   }
 
   .filter-item {
+    gap: 12px;
+
     /* pour tenir compte du gap */
     width: min(calc(50% - 5px), 250px);
   }
 
   .filter-text {
     font-size: var(--font-size-s);
-    margin-left: 14px;
   }
 
   /* Herbergements, populaires et footer */
