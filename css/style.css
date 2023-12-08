@@ -322,7 +322,14 @@ section.hebergements {
 .hebergements-cards .card-subtitle {
   margin-bottom: 4px;
 }
+
+.hebergements-subtext {
+  font-size: var(--font-size-l);
+  font-weight: bold;
+}
+
 /****** Populaires ***********/
+
 .populaires {
   width: 32%;
 }
@@ -400,6 +407,7 @@ section.hebergements {
 }
 
 /****** Footer ***********/
+
 footer {
   width: 100%;
   background-color: var(--light-bg-color);
@@ -488,11 +496,45 @@ footer {
     border-bottom-color: var(--main-color);
   }
 
-  section.search,
-  .hebergements-and-populaires section {
+  /* Ajuster paddings et margins des sections pour l'affichage mobile */
+
+  main {
+    margin-top: 30px;
+    margin-bottom: 35px;
+  }
+
+  section:not(.activites),
+  .search {
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  .hebergements-and-populaires section {
+    border-radius: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  section.populaires {
+    margin-top: 35px;
+    margin-bottom: 15px;
+  }
+
+  .populaires-cards .card {
+    margin-top: 0;
+  }
+
+  section.hebergements {
+    padding: 20px;
+    width: auto;
+    background-color: white;
+  }
+
+  section.activites {
+    margin-top: 35px;
+  }
+
+  /* Barre de recherche */
 
   .search-form {
     width: 100%;
@@ -528,6 +570,8 @@ footer {
     display: block;
   }
 
+  /* Filtres */
+
   .search-filters {
     flex-direction: column;
   }
@@ -550,17 +594,10 @@ footer {
     font-size: var(--font-size-m);
   }
 
+  /* Herbergements, populaires et footer */
+
   .hebergements-and-populaires {
     flex-direction: column-reverse;
-  }
-
-  .hebergements-and-populaires section {
-    border-radius: 0;
-  }
-
-  section.hebergements {
-    width: auto;
-    background-color: white;
   }
 
   .hebergements-cards,
@@ -569,6 +606,14 @@ footer {
   footer {
     flex-direction: column;
     gap: 15px;
+  }
+
+  .populaires-title {
+    margin-bottom: 15px;
+  }
+
+  .hebergements-cards {
+    margin-top: 15px;
   }
 
   .hebergements-cards a,
@@ -583,5 +628,6 @@ footer {
 
   footer {
     gap: 50px;
+    padding: 30px;
   }
 }
