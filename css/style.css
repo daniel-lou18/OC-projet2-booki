@@ -102,7 +102,7 @@ button:hover {
 
 /****** Header (en-tête) ***********/
 
-.navbar {
+header {
   display: flex;
   justify-content: space-between;
 }
@@ -144,6 +144,7 @@ button:hover {
   flex-direction: column;
   align-items: start;
   gap: 35px;
+  /* pour supprimer le padding appliqué sur les balises "section" */
   padding: 0;
 }
 
@@ -152,7 +153,7 @@ button:hover {
 }
 
 .search-form {
-  display: inline-flex;
+  display: flex;
   height: 50px;
 }
 
@@ -169,6 +170,7 @@ button:hover {
 }
 
 .search-icon-wrapper {
+  /* on ne met pas les border-radius sur le conteneur (.search-form) car en version mobile il va falloir mettre un border radius sur les quatre coins du bouton "search"; */
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   height: 50px;
@@ -193,6 +195,7 @@ button:hover {
 }
 
 .search-button {
+  /* en version mobile les quatre coins du boutons auront des border-radius*/
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   color: white;
@@ -236,7 +239,6 @@ button:hover {
 }
 
 .filter-item {
-  font-size: 21px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -257,6 +259,8 @@ button:hover {
 }
 
 .filter-icon-wrapper {
+  /* définir la font-size sur le wrapper de l'icone font awesome permet de changer la taille de l'icone  */
+  font-size: 21px;
   width: 22px;
   height: 22px;
   display: flex;
@@ -271,6 +275,7 @@ button:hover {
 
 .search-subtitle span {
   --small-icon-size: 24px;
+  /* inline-flex afin que la balise span se comporte comme un élément inline et non un élément block */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -279,10 +284,7 @@ button:hover {
   border-radius: 50%;
   border: 1px solid var(--dark-bg-color);
   margin-right: 10px;
-}
-
-.search-subtitle span i {
-  transform: scale(0.7);
+  font-size: 11px;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -303,11 +305,13 @@ button:hover {
 
 section.hebergements {
   width: 65%;
+  /* Supprimer padding-right pour tenir compte du gap appliqué sur les cards */
   padding-right: 0;
 }
 
 .hebergements-cards {
   display: flex;
+  /* Sinon toutes les cards seront alignées sur une ligne horizontale */
   flex-wrap: wrap;
   gap: 30px;
   margin: 30px 0;
@@ -318,6 +322,7 @@ section.hebergements {
 }
 
 .hebergements-cards a {
+  /* Tenir compte de la taille du gap */
   width: calc((100% / 3) - 30px);
 }
 
@@ -400,6 +405,7 @@ section.hebergements {
 }
 
 .activites-cards a {
+  /* Chaque card s'élargit (flex-grow 1) et se rétrécit (flex-shrink 1) de façon identique sans tenir compte de sa largeur initiale (flex-basis 0)*/
   flex: 1;
 }
 
@@ -481,6 +487,7 @@ footer {
   }
 
   .populaires-cards {
+    /* Aligner les cards horizontalement */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -501,6 +508,7 @@ footer {
   /* Filtres */
 
   .search-filters {
+    /* Mettre le titre "Filtres" au-dessus des boutons */
     flex-direction: column;
     gap: 20px;
   }

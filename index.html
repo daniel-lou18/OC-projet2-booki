@@ -23,10 +23,10 @@
   <body>
     <div class="main-container">
       <header>
+        <a class="logo-link" href="#">
+          <img class="logo-img" src="./images/logo/Booki.png" />
+        </a>
         <nav class="navbar">
-          <a class="logo-link" href="#">
-            <img class="logo-img" src="./images/logo/Booki.png" />
-          </a>
           <ul class="navbar-list">
             <li class="navbar-item">
               <a class="navbar-link" href="#hebergements">Hébergements</a>
@@ -40,6 +40,7 @@
       <main>
         <section class="search">
           <div class="search-title">
+            <!-- Ou faut-il mettre le logo de Booki entre des balises h1 ? -->
             <h1 class="section-title">
               Trouvez votre hébergement pour des vacances de rêve
             </h1>
@@ -59,8 +60,9 @@
                 placeholder="Marseille, France"
               />
               <button class="search-button">
-                <span class="word">Rechercher</span
-                ><span class="icon"
+                <span class="word">Rechercher</span>
+                <!-- l'icone: visibility: none en version desktop -->
+                <span class="icon"
                   ><i class="fa-solid fa-magnifying-glass"></i
                 ></span>
               </button>
