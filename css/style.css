@@ -77,7 +77,7 @@ button:hover {
   border-radius: 20px;
   padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  transition: 0.2s ease;
+  transition: 0.2s ease-out;
 }
 
 .card img {
@@ -195,7 +195,7 @@ header {
 }
 
 .search-button {
-  /* en version mobile les quatre coins du boutons auront des border-radius*/
+  /* en version mobile les quatre coins des boutons auront des border-radius*/
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   color: white;
@@ -514,6 +514,7 @@ footer {
   }
 
   .filters-title {
+    /* Positionner le titre à gauche */
     align-self: start;
   }
 
@@ -538,25 +539,27 @@ footer {
     padding: 0;
   }
 
-  .navbar {
+  header {
     flex-direction: column;
   }
 
   .logo-link {
+    /* Positionner le logo au milieu */
     align-self: center;
   }
 
   .navbar-list {
+    /* Supprimer le gap pour avoir une bordure sur toute la largeur de la balise li */
     gap: 0;
   }
 
   .navbar-item {
-    align-items: start;
+    /* Les deux balises li doivent s'étirer sur toute la largeur */
     flex: 1;
-    justify-content: center;
   }
 
   .navbar-link {
+    /* Positionner le texte en haut pour créer de l'espace entre le texte et la bordure*/
     align-items: start;
     justify-content: center;
     border-bottom-color: var(--light-bg-color);
@@ -568,7 +571,7 @@ footer {
     border-bottom-color: var(--main-color);
   }
 
-  /* Ajuster paddings et margins des sections pour l'affichage mobile */
+  /* Regrouper tous les ajustements pour les margins et paddings */
 
   main {
     margin-top: 30px;
@@ -577,6 +580,7 @@ footer {
 
   section:not(.activites),
   .search {
+    /* Il n'y a plus de padding dans le conteneur principal */
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -598,7 +602,6 @@ footer {
 
   section.hebergements {
     padding: 20px;
-    width: auto;
     background-color: white;
   }
 
@@ -609,10 +612,12 @@ footer {
   /* Barre de recherche */
 
   .search-form {
+    /* Définir une largeur maximale : 510px pour les écrans mobiles larges et 100% pour les petits écrans mobiles */
     width: min(510px, 100%);
   }
 
   .search-bar {
+    flex: 1;
     border: 1px solid var(--light-bg-color);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -620,14 +625,13 @@ footer {
 
   .search-input {
     border: 0;
+    /* le champ de saisie doit s'étirer sur toute la largeur du conteneur parent en prenant en compte la taille du bouton */
     width: calc(100% - 50px);
   }
 
   .search-button {
-    border: 1px solid var(--light-bg-color);
     width: 50px;
     height: 50px;
-    border: 1px solid var(--main-color);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -651,7 +655,7 @@ footer {
   .filter-item {
     gap: 12px;
 
-    /* pour tenir compte du gap */
+    /* Enlever 5px (2 éléments sur une ligne) pour tenir compte du gap. La largeur ne sera jamais supérieure à 250px */
     width: min(calc(50% - 5px), 250px);
   }
 
@@ -662,6 +666,7 @@ footer {
   /* Herbergements, populaires et footer */
 
   .hebergements-and-populaires {
+    /* On inverse l'ordre d'affichage : d'abord les plus populaires et puis les hébergements */
     flex-direction: column-reverse;
   }
 
