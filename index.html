@@ -24,7 +24,7 @@
     <div class="main-container">
       <header>
         <a class="logo-link" href="#">
-          <img class="logo-img" src="./images/logo/Booki.png" />
+          <img class="logo-img" src="./images/logo/Booki.png" alt="logo" />
         </a>
         <nav class="navbar">
           <ul class="navbar-list">
@@ -48,9 +48,14 @@
               En plein centre-ville ou en pleine nature
             </p>
           </div>
-          <form class="search-form">
+          <form class="search-form" method="post" action="">
+            <!-- clicker sur l'icône permet de mettre le focus sur la balise input -->
             <label class="search-icon-wrapper" for="search-field">
-              <i class="fa-solid fa-location-dot" style="color: #000000"></i>
+              <i
+                class="fa-solid fa-location-dot"
+                style="color: #000000"
+                aria-hidden="true"
+              ></i>
             </label>
             <div class="search-bar">
               <input
@@ -61,9 +66,12 @@
               />
               <button class="search-button">
                 <span class="word">Rechercher</span>
-                <!-- l'icone: visibility: none en version desktop -->
+                <!-- icone: visibility: none en version desktop -->
                 <span class="icon"
-                  ><i class="fa-solid fa-magnifying-glass"></i
+                  ><i
+                    class="fa-solid fa-magnifying-glass"
+                    aria-hidden="true"
+                  ></i
                 ></span>
               </button>
             </div>
@@ -72,36 +80,49 @@
             <h3 class="filters-title">Filtres</h3>
             <div class="filters-container">
               <button class="filter-item">
-                <div class="filter-icon-wrapper">
+                <span class="filter-icon-wrapper">
                   <i
                     class="fa-solid fa-money-bill-wave"
                     style="color: #0065fc"
+                    aria-hidden="true"
                   ></i>
-                </div>
-                <div class="filter-text">Économique</div>
+                </span>
+                <span class="filter-text">Économique</span>
               </button>
               <button class="filter-item">
-                <div class="filter-icon-wrapper">
-                  <i class="fa-solid fa-person" style="color: #0065fc"></i>
-                </div>
-                <div class="filter-text">Familial</div>
+                <span class="filter-icon-wrapper">
+                  <i
+                    class="fa-solid fa-person"
+                    style="color: #0065fc"
+                    aria-hidden="true"
+                  ></i>
+                </span>
+                <span class="filter-text">Familial</span>
               </button>
               <button class="filter-item">
-                <div class="filter-icon-wrapper">
-                  <i class="fa-solid fa-heart" style="color: #0065fc"></i>
-                </div>
-                <div class="filter-text">Romantique</div>
+                <span class="filter-icon-wrapper">
+                  <i
+                    class="fa-solid fa-heart"
+                    style="color: #0065fc"
+                    aria-hidden="true"
+                  ></i>
+                </span>
+                <span class="filter-text">Romantique</span>
               </button>
               <button class="filter-item">
-                <div class="filter-icon-wrapper">
-                  <i class="fa-solid fa-fire" style="color: #0065fc"></i>
-                </div>
-                <div class="filter-text">Nos pépites</div>
+                <span class="filter-icon-wrapper">
+                  <i
+                    class="fa-solid fa-fire"
+                    style="color: #0065fc"
+                    aria-hidden="true"
+                  ></i>
+                </span>
+                <span class="filter-text">Nos pépites</span>
               </button>
             </div>
           </div>
           <p class="section-subtitle search-subtitle">
-            <span><i class="fa-solid fa-info"></i></span>
+            <span><i class="fa-solid fa-info" aria-hidden="true"></i></span>
             Plus de 500 logements sont disponibles dans cette ville
           </p>
         </section>
@@ -272,7 +293,7 @@
                 </article>
               </a>
             </div>
-            <a class="hebergements-subtext">Afficher plus</a>
+            <a class="hebergements-subtext" href="#">Afficher plus</a>
           </section>
           <section class="populaires" id="populaires">
             <div class="populaires-title">

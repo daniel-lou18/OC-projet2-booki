@@ -180,6 +180,12 @@ header {
   align-items: center;
   padding: 0;
   background-color: var(--light-bg-color);
+  transition: 0.2s ease-out;
+}
+
+.search-icon-wrapper:hover {
+  cursor: pointer;
+  background-color: var(--dark-bg-color);
 }
 
 .search-input,
@@ -260,6 +266,7 @@ header {
 
 .filter-icon-wrapper {
   /* définir la font-size sur le wrapper de l'icone font awesome permet de changer la taille de l'icone  */
+
   font-size: 21px;
   width: 22px;
   height: 22px;
@@ -348,6 +355,10 @@ section.hebergements {
 .hebergements-subtext {
   font-size: var(--font-size-l);
   font-weight: bold;
+}
+
+.hebergements-subtext:hover {
+  color: var(--main-color);
 }
 
 /****** Populaires ***********/
