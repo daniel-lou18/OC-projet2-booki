@@ -712,12 +712,15 @@ footer {
 
   .hebergements-cards a,
   .populaires-cards a {
-    width: auto;
+    width: 100%;
   }
 
   .activites-cards img {
     height: 141px;
-    width: auto;
+  }
+
+  .activites-cards h3 {
+    height: 59px;
   }
 
   footer {
