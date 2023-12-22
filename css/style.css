@@ -447,7 +447,7 @@ section.hebergements {
 
 /****** Footer ***********/
 
-.wrapper-footer {
+.footer-container {
   background-color: var(--light-bg-color);
   width: 100%;
 }
@@ -456,9 +456,10 @@ footer {
   width: 100%;
   /* background-color: var(--light-bg-color); */
   max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 50px;
+  margin-right: 50px;
   display: flex;
+  justify-content: space-around;
   padding: 20px;
 }
 
