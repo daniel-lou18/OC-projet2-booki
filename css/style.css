@@ -192,11 +192,14 @@ main {
   background-color: var(--dark-bg-color);
 }
 
+.search-icon-wrapper i {
+  color: #000000;
+}
+
 .search-input,
 .search-button {
   padding-top: 15px;
   padding-bottom: 15px;
-  /* line-height: 1; */
 }
 
 .search-input {
@@ -284,14 +287,18 @@ main {
   font-weight: bold;
 }
 
+.search-subtitle {
+  display: flex;
+  align-items: center;
+}
+
 .search-subtitle span {
   --small-icon-size: 24px;
-  /* inline-flex afin que la balise span se comporte comme un élément inline et non un élément block */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   height: var(--small-icon-size);
   width: var(--small-icon-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   border: 1px solid var(--dark-bg-color);
   margin-right: 10px;
@@ -426,12 +433,10 @@ section.hebergements {
 }
 
 .activites-cards .card {
-  /* height: 100%; */
   padding: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */
 }
 
 .activites-cards h3 {
@@ -456,17 +461,15 @@ section.hebergements {
 
 footer {
   width: 100%;
-  /* background-color: var(--light-bg-color); */
   max-width: 1440px;
-  margin-left: 50px;
-  margin-right: 50px;
+  padding: 0 50px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
-  padding: 20px;
 }
 
 .footer-menu {
   flex: 1;
+  padding: 20px;
 }
 
 .footer-menu-title {
