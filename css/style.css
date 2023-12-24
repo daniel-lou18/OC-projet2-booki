@@ -22,6 +22,10 @@
   --font-size-ml: 17px;
   --font-size-m: 16px;
   --font-size-s: 14px;
+
+  --border-radius-card: 20px;
+  --border-radius-img: 15px;
+  /* border radius intérieure = border radius extérieure - distance entre les deux bordures (padding) */
 }
 
 .fa-solid {
@@ -64,7 +68,7 @@ button:hover {
 
 .card {
   background-color: white;
-  border-radius: 20px;
+  border-radius: var(--border-radius-card);
   padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   transition: 0.2s ease-out;
@@ -339,9 +343,8 @@ section.hebergements {
 .hebergements-cards img {
   width: 100%;
   height: 124px;
-  /* pas nécessaire de mettre object-fit: cover car déjà défini par la règle .card img -  ligne 77 */
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: var(--border-radius-img);
+  border-top-right-radius: var(--border-radius-img);
 }
 
 .hebergements-cards .card-content {
@@ -385,8 +388,8 @@ section.hebergements {
 .populaires-cards img {
   width: 33%;
   height: 136px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-left-radius: var(--border-radius-img);
+  border-bottom-left-radius: var(--border-radius-img);
 }
 
 .populaires-cards .card-content {
