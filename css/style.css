@@ -28,16 +28,10 @@
   color: var(--main-color);
 }
 
-body {
-  /* display: flex;
-  justify-content: center; */
-}
-
 .main-container {
   width: 100%;
   max-width: 1440px;
   padding: 0 50px;
-  /* centrer le contenu ainsi pour permettre au wrapper du footer (couleur de fond grise) de prendre toute la largeur de l'écran  */
   margin: 0 auto;
 }
 
@@ -516,7 +510,6 @@ footer {
   .populaires-cards {
     /* Aligner les cards horizontalement */
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
   }
 
@@ -730,5 +723,9 @@ footer {
     gap: 50px;
     padding: 30px;
     margin: 0;
+  }
+
+  .footer-menu {
+    padding: 0;
   }
 }
