@@ -237,7 +237,6 @@ main {
 
 .filters-container {
   display: flex;
-  /* align-items: center; */
   gap: 15px;
 }
 
@@ -266,8 +265,6 @@ main {
 }
 
 .filter-icon-wrapper {
-  /* définir la font-size sur le wrapper de l'icone font awesome permet de changer la taille de l'icone  */
-
   font-size: 21px;
   width: 22px;
   height: 22px;
@@ -284,18 +281,19 @@ main {
 .search-subtitle {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .search-subtitle span {
-  --small-icon-size: 24px;
-  height: var(--small-icon-size);
-  width: var(--small-icon-size);
+  flex-shrink: 0;
+  /* Sinon la bordure ronde sera déformée en version mobile */
+  height: 24px;
+  width: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   border: 1px solid var(--dark-bg-color);
-  margin-right: 10px;
   font-size: 11px;
 }
 
@@ -686,7 +684,6 @@ footer {
   /* Herbergements, populaires et footer */
 
   .hebergements-and-populaires {
-    /* On inverse l'ordre d'affichage : d'abord les plus populaires et puis les hébergements */
     flex-direction: column-reverse;
   }
 
