@@ -172,11 +172,12 @@ main {
 }
 
 .search-icon-wrapper {
+  height: 50px;
+  width: 50px;
+  flex-shrink: 0;
   /* on ne met pas les border-radius sur le conteneur (.search-form) car en version mobile il va falloir mettre un border radius sur les quatre coins du bouton "search"; */
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  height: 50px;
-  width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
