@@ -203,14 +203,14 @@ main {
 
 .search-input {
   border: 1px solid var(--light-bg-color);
-  color: black;
+  color: #000000;
 }
 
 .search-button {
   /* en version mobile les quatre coins des boutons auront des border-radius*/
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  color: white;
+  color: #ffffff;
   background-color: var(--main-color);
   border: none;
 }
@@ -262,7 +262,7 @@ main {
 }
 
 .filter-item:hover {
-  background: var(--light-main-color);
+  background-color: var(--light-main-color);
 }
 
 .filter-item:active {
